@@ -1,0 +1,7 @@
+{
+  "name": "MdbExercise",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
