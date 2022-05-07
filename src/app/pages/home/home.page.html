@@ -1,6 +1,7 @@
 <ion-content>
     <ion-toolbar>
-        <ion-searchbar class="searchBar" mode="ios" placeholder="Search movie" debounce="700"></ion-searchbar>
+        <ion-searchbar (ionChange)="search($event)" class="searchBar" mode="ios" placeholder="Search movie"
+            debounce="700" [value]="searchText"></ion-searchbar>
     </ion-toolbar>
     <router-outlet></router-outlet>
 </ion-content>

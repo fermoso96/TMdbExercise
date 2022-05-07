@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http'
 import { DatePipe } from '@angular/common';
 import { environment } from 'src/environments/environment';
 import { MoviesObject } from '../interfaces';
+import { BehaviorSubject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -15,6 +16,8 @@ export class MoviesService {
   apiKey = environment.api_key;
   TODAY;
   MONTHAGO;
+
+  searchResults = new BehaviorSubject<MoviesObject | false>(false);
 
   constructor(private http: HttpClient, private datePipe: DatePipe) {
     this.getDates(14);
