@@ -1,5 +1,13 @@
+ion-menu {
+  --width: 250px;
+  --side-max-width: 15%;
+}
+
 ion-menu ion-content {
-  --background: var(--ion-item-background, var(--ion-background-color, #fff));
+  --background: var(
+    --ion-item-background,
+    linear-gradient(90deg, rgba(143, 206, 161, 1) 0%, rgba(95, 197, 184, 1) 100%)
+  );
 }
 
 ion-menu.md ion-content {
@@ -11,6 +19,7 @@ ion-menu.md ion-content {
 
 ion-menu.md ion-list {
   padding: 20px 0;
+  background-color: rgba(255, 255, 255, 0);
 }
 
 ion-menu.md ion-note {
@@ -19,6 +28,7 @@ ion-menu.md ion-note {
 
 ion-menu.md ion-list-header,
 ion-menu.md ion-note {
+  color: white;
   padding-left: 10px;
 }
 
@@ -44,25 +54,37 @@ ion-menu.md ion-list#labels-list ion-list-header {
 }
 
 ion-menu.md ion-item {
+  --background: rgba(255, 255, 255, 0);
+  color: white;
   --padding-start: 10px;
   --padding-end: 10px;
   border-radius: 4px;
 }
 
+ion-menu.md ion-item:hover {
+  --color: white !important;
+}
+
 ion-menu.md ion-item.selected {
-  --background: rgba(var(--ion-color-primary-rgb), 0.14);
+  color: #02b3e4;
+  --background: rgba(255, 255, 255, 0.438);
+  font-weight: bold;
+}
+
+ion-menu.md ion-item.selected:hover {
+  --color: #02b3e4 !important;
 }
 
 ion-menu.md ion-item.selected ion-icon {
-  color: var(--ion-color-primary);
+  color: #02b3e4;
 }
 
 ion-menu.md ion-item ion-icon {
-  color: #616e7e;
+  color: white;
 }
 
 ion-menu.md ion-item ion-label {
-  font-weight: 500;
+  font-weight: 1500;
 }
 
 ion-menu.ios ion-content {
