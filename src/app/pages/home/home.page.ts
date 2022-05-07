@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Movie } from 'src/app/interfaces';
+import { MoviesService } from 'src/app/services/movies.service';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomePage implements OnInit {
 
-  constructor() { }
+  recentMovies: Movie[] = [];
 
-  ngOnInit() {
+  constructor(private moviesSrv: MoviesService) { }
+
+  ngOnInit(): void {
+    this.getRecents();
+  }
+
+  getRecents() {
+    this.moviesSrv.getRecentMovies().subscribe(data => {
+      this.recentMovies = data['results'];
+    });
   }
 
 }
