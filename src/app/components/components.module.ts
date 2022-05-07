@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { SwiperModule } from 'swiper/angular';
 import { IonicModule } from '@ionic/angular';
 import { PipesModule } from '../pipes/pipes.module';
+import { MovieCardComponent } from './movie-card/movie-card.component';
 
 
 
@@ -11,10 +12,10 @@ import { PipesModule } from '../pipes/pipes.module';
 
   ],
   declarations: [
-
+    MovieCardComponent
   ],
   exports: [
-
+    MovieCardComponent
   ],
   imports: [
     CommonModule,

@@ -1,5 +1,11 @@
 <ion-content>
 
-
+    <ion-grid >
+        <ion-row>
+            <ion-col size="4" *ngFor="let movie of recentMovies">
+                <app-movie-card [movie]="movie"></app-movie-card>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
 
 </ion-content>
