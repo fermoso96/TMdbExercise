@@ -8,6 +8,8 @@ import { HomePageRoutingModule } from './home-routing.module';
 
 import { HomePage } from './home.page';
 import { ComponentsModule } from '../../components/components.module';
+import { SearchComponent } from './search/search.component';
+import { PremieresComponent } from './premieres/premieres.component';
 
 @NgModule({
   imports: [
@@ -17,6 +19,15 @@ import { ComponentsModule } from '../../components/components.module';
     HomePageRoutingModule,
     ComponentsModule
   ],
-  declarations: [HomePage]
+  declarations: [
+    SearchComponent,
+    HomePage,
+    PremieresComponent
+  ],
+  exports: [
+    SearchComponent,
+    HomePage,
+    PremieresComponent
+  ]
 })
 export class HomePageModule { }

@@ -1,11 +1,6 @@
 <ion-content>
-
-    <ion-grid>
-        <ion-row>
-            <ion-col size="4" size-lg="4" size-md="6" size-sm="6" size-xs="12" *ngFor="let movie of recentMovies">
-                <app-movie-card [movie]="movie"></app-movie-card>
-            </ion-col>
-        </ion-row>
-    </ion-grid>
-
+    <ion-toolbar>
+        <ion-searchbar class="searchBar" mode="ios" placeholder="Search movie" debounce="700"></ion-searchbar>
+    </ion-toolbar>
+    <router-outlet></router-outlet>
 </ion-content>
