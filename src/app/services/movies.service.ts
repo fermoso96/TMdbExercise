@@ -53,4 +53,12 @@ export class MoviesService {
     })
   }
 
+  searchMovies(search: string) {
+    return this.executeQuery<MoviesObject>(`search/movie`, {
+      params: {
+        'query': search,
+      }
+    })
+  }
+
 }
