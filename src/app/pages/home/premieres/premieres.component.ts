@@ -11,7 +11,7 @@ export class PremieresComponent implements OnInit {
 
   premieres: Movie[] = [];
 
-  constructor(private moviesSrv: MoviesService) { }
+  constructor(public moviesSrv: MoviesService) { }
 
   ngOnInit() {
     this.getRecents();

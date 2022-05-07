@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { MoviesService } from 'src/app/services/movies.service';
 
 @Component({
@@ -8,8 +9,13 @@ import { MoviesService } from 'src/app/services/movies.service';
 })
 export class SearchComponent implements OnInit {
 
-  constructor(public moviesSrv: MoviesService) { }
+  constructor(public moviesSrv: MoviesService,
+    private router: Router) { }
 
-  ngOnInit() {}
+  ngOnInit() {
+    if (!this.moviesSrv.searchResults.value) {
+      this.router.navigate(['/home']);
+    }
+  }
 
 }

@@ -1,3 +1,6 @@
+<div class="centered" *ngIf="moviesSrv.searchResults.value">
+    <span class="text">{{moviesSrv.searchResults.value.results.length}} <small>RESULTS</small></span>
+</div>
 <ion-grid>
     <ion-row *ngIf="moviesSrv.searchResults.value">
         <ion-col size="4" size-lg="4" size-md="6" size-sm="6" size-xs="12"
