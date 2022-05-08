@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http'
 import { DatePipe } from '@angular/common';
-import { environment } from 'src/environments/environment';
+import { environment } from '../../environments/environment';
 import { MovieCredits, MovieDetail, MoviesByCast, MoviesObject, PersonDetail } from '../interfaces';
 import { BehaviorSubject } from 'rxjs';
 

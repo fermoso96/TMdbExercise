@@ -7,8 +7,8 @@ import { IonicModule } from '@ionic/angular';
 import { FavoritesPageRoutingModule } from './favorites-routing.module';
 
 import { FavoritesPage } from './favorites.page';
-import { PipesModule } from 'src/app/pipes/pipes.module';
-import { ComponentsModule } from 'src/app/components/components.module';
+import { PipesModule } from '../../pipes/pipes.module';
+import { ComponentsModule } from '../../components/components.module';
 
 @NgModule({
   imports: [

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { MoviesService } from 'src/app/services/movies.service';
+import { MoviesService } from '../../../services/movies.service';
 
 @Component({
   selector: 'app-search',

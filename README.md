@@ -6,6 +6,8 @@
   </a>
 
   <h3 align="center">TMDB Exercise</h3>
+   <br />
+    <a href="https://stackblitz.com/github/fermoso96/TMdbExercise"><strong>LIVE DEMO</strong></a>
 
   <p align="center">
     Programming test that consists of creating a movie web application with the possibility of adding movies to favorites. Angular + Ionic
@@ -58,8 +60,6 @@ Optional terms applied:
 Additional features:
 * Una página de detalles que muestra información detallada sobre el actor seleccionado.
 * Alerts when a movie is added or removed from favorites.
-
-Of course, no one template will serve all projects since your needs may be different. So I'll be adding more in the near future. You may also suggest changes by forking this repo and creating a pull request or opening an issue. Thanks to all the people have contributed to expanding this template!
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -195,6 +195,7 @@ Project Link: [https://github.com/fermoso96/TMdbExercise](https://github.com/fer
 
 * [Node Version Manger](https://content.breatheco.de/es/how-to/nvm-install-windows)
 * [Ionic Storage](https://ionicframework.com/docs/angular/storage)
+* [Quick Type](https://app.quicktype.io/)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 

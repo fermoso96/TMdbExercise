@@ -1,11 +1,11 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { Movie } from 'src/app/interfaces';
-import { LocaldataService } from 'src/app/services/localdata.service';
+import { Movie } from '../../interfaces';
+import { LocaldataService } from '../../services/localdata.service';
 import { MoviesService } from '../../services/movies.service';
 import { MovieDetail } from '../../interfaces/index';
 import { ModalController } from '@ionic/angular';
 import { DetailComponent } from '../detail/detail.component';
-import { ToastService } from 'src/app/services/toast.service';
+import { ToastService } from '../../services/toast.service';
 
 @Component({
   selector: 'app-movie-card',
