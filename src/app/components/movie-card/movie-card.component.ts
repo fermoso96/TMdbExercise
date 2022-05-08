@@ -5,6 +5,7 @@ import { MoviesService } from '../../services/movies.service';
 import { MovieDetail } from '../../interfaces/index';
 import { ModalController } from '@ionic/angular';
 import { DetailComponent } from '../detail/detail.component';
+import { ToastService } from 'src/app/services/toast.service';
 
 @Component({
   selector: 'app-movie-card',
@@ -22,7 +23,8 @@ export class MovieCardComponent implements OnInit {
 
   constructor(public localdataSrv: LocaldataService,
     private movieSrv: MoviesService,
-    private modalCtlr: ModalController
+    private modalCtlr: ModalController,
+    private toastSrv: ToastService
   ) { }
 
   ngOnInit() {
@@ -36,6 +38,7 @@ export class MovieCardComponent implements OnInit {
     ev.stopPropagation();
     this.localdataSrv.saveRemoveMovie(this.movieDetail);
     this.favorite = this.localdataSrv.checkMovie(this.movieDetail);
+    this.toastSrv.presentFavoriteToast(this.favorite);
     this.refresh.emit();
   }
 
