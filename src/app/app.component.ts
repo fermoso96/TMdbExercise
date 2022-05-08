@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { LocaldataService } from './services/localdata.service';
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
@@ -9,6 +10,5 @@ export class AppComponent {
     { title: 'Home', url: '/home', icon: 'home-outline' },
     { title: 'Favorites', url: '/favorites', icon: 'star-outline' }
   ];
-  public labels = ['Family', 'Friends', 'Notes', 'Work', 'Travel', 'Reminders'];
-  constructor() { }
+  constructor(public localdataSrv: LocaldataService) { }
 }

@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http'
 import { DatePipe } from '@angular/common';
 import { environment } from 'src/environments/environment';
-import { MoviesObject } from '../interfaces';
+import { MovieDetail, MoviesObject } from '../interfaces';
 import { BehaviorSubject } from 'rxjs';
 
 @Injectable({
@@ -53,6 +53,12 @@ export class MoviesService {
         'sort_by': 'popularity.desc',
         'page': this.popularsPage
       }
+    })
+  }
+
+  getMovieDetail(id: string) {
+    return this.executeQuery<MovieDetail>(`movie/${id}`, {
+      params: {}
     })
   }
 
