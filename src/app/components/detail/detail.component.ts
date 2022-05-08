@@ -60,7 +60,7 @@ export class DetailComponent implements OnInit {
   async presentModal(cast) {
     const modal = await this.modalCtlr.create({
       component: CastDetailComponent,
-      cssClass: 'my-custom-class',
+      cssClass: 'my-modal-class',
       componentProps: {
         'cast': cast
       }

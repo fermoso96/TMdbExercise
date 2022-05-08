@@ -45,7 +45,7 @@ export class MovieCardComponent implements OnInit {
   async presentModal() {
     const modal = await this.modalCtlr.create({
       component: DetailComponent,
-      cssClass: 'my-custom-class',
+      cssClass: 'my-modal-class',
       componentProps: {
         'movieId': this.movie.id
       }

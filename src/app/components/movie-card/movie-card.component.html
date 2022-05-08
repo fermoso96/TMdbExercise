@@ -5,7 +5,9 @@
   </div>
   <div class="info">
     <ion-label class="titulo">
-      <h1>{{movie.title}}</h1>
+      <h1>{{movie.title}}<br>
+        <h2>Release date: {{movie.release_date | date : 'dd/MM/YYYY'}}</h2>
+      </h1>
     </ion-label>
 
     <img class="backdropImg" style="width:100%;" *ngIf="movie.backdrop_path" [src]="movie.backdrop_path | image" alt="">
