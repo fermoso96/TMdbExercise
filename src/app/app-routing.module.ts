@@ -14,10 +14,6 @@ const routes: Routes = [
   {
     path: 'favorites',
     loadChildren: () => import('./pages/favorites/favorites.module').then(m => m.FavoritesPageModule)
-  },
-  {
-    path: 'movieDetail:id',
-    loadChildren: () => import('./pages/movie-detail/movie-detail.module').then(m => m.MovieDetailPageModule)
   }
 ];
 

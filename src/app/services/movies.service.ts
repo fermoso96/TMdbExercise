@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http'
 import { DatePipe } from '@angular/common';
 import { environment } from 'src/environments/environment';
-import { MovieDetail, MoviesObject } from '../interfaces';
+import { MovieCredits, MovieDetail, MoviesByCast, MoviesObject, PersonDetail } from '../interfaces';
 import { BehaviorSubject } from 'rxjs';
 
 @Injectable({
@@ -66,6 +66,28 @@ export class MoviesService {
     return this.executeQuery<MoviesObject>(`search/movie`, {
       params: {
         'query': search,
+      }
+    })
+  }
+
+  getMovieCredits(id: string) {
+    return this.executeQuery<MovieCredits>(`movie/${id}/credits`, {
+      params: {}
+    })
+  }
+
+  searchPerson(person: string) {
+    return this.executeQuery<PersonDetail>(`search/person`, {
+      params: {
+        'query': person,
+      }
+    })
+  }
+
+  moviesByCast(person_id) {
+    return this.executeQuery<MoviesByCast>(`person/${person_id}/movie_credits`, {
+      params: {
+        'sort_by': 'popularity.desc'
       }
     })
   }

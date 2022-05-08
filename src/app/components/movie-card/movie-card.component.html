@@ -1,4 +1,4 @@
-<div class="poster">
+<div class="poster" (click)="presentModal()">
   <div class="image">
     <img class="posterImg" style="width:100%;height: 100%;" *ngIf="movie.poster_path" [src]="movie.poster_path | image"
       alt="">
@@ -41,7 +41,8 @@
       </ion-row>
     </ion-grid>
     <footer class="centered">
-      <ion-icon (click)="onFavorite()" [class]="!favorite ? 'favIcon' : 'favIconSelected'" slot="start" ios="star" md="star"></ion-icon>
+      <ion-icon (click)="onFavorite($event)" [class]="!favorite ? 'favIcon' : 'favIconSelected'" slot="start" ios="star"
+        md="star"></ion-icon>
     </footer>
   </div>
 </div>
