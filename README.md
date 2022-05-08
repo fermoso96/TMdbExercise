@@ -5,7 +5,7 @@
     <img src="src/assets/images/tmdb.png" alt="Logo" width="80" height="80">
   </a>
 
-  <h3 align="center">TMDB Exercvise</h3>
+  <h3 align="center">TMDB Exercise</h3>
 
   <p align="center">
     Programming test that consists of creating a movie web application with the possibility of adding movies to favorites. Angular + Ionic
@@ -99,24 +99,24 @@ Install Angular.
 ### Installation
 
 1. Get a free TMDB API Key at [https://www.themoviedb.org/?language=es](https://www.themoviedb.org/?language=es)
-    <br />
+ 
 2. Clone the repo
-    <br />
+ 
    ```sh
    git clone https://github.com/fermoso96/TMdbExercise.git
    ```
 3. Install NPM packages
-    <br />
+ 
    ```sh
    npm install
    ```
 4. Enter your API in `src\environments\environment.ts` and `src\environments\environment.prod.ts`
-    <br />
+ 
    ```js
    api_key = 'ENTER YOUR API';
    ```
 5. Start the application
-    <br />
+ 
    ```sh
     npm start
    ```
@@ -182,7 +182,7 @@ _When we're on portable devices, we can't 'hover' to see the favorites button on
 <!-- CONTACT -->
 ## Contact
 
-Fernando Hermoso Castaño - 678297372 - ferhc96@gmail.com
+Fernando Hermoso Castaño - tlf:678297372 - ferhc96@gmail.com
 
 Project Link: [https://github.com/fermoso96/TMdbExercise](https://github.com/fermoso96/TMdbExercise)
 
